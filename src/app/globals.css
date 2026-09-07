@@ -1,0 +1,62 @@
+:root {
+  /* Paleta: consola de monitoreo de red — no una plantilla SaaS genérica.
+     Dos acentos con significado: ámbar = dirección emisor->receptor,
+     cian = dirección receptor->emisor. Esto se usa consistentemente
+     en TODA la app para que el color enseñe algo, no decore. */
+  --bg: #0f1419;
+  --bg-panel: #161d24;
+  --bg-raised: #1d252d;
+  --line: #2a333c;
+  --text: #e7e9ea;
+  --text-dim: #8b98a5;
+  --amber: #e8a33d;
+  --amber-dim: #6b5730;
+  --cyan: #4fd1c5;
+  --cyan-dim: #2c5a56;
+  --red: #d9645f;
+  --green: #7cb87f;
+
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}

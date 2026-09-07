@@ -1,0 +1,76 @@
+.channel-view__stage {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 8px;
+}
+
+.channel-view__endpoint {
+  font-size: 13px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.channel-view__track {
+  position: relative;
+  height: 90px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.channel-view__rail {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  height: 1px;
+  background: var(--line);
+}
+
+.channel-view__rail--forward {
+  top: 32px;
+}
+
+.channel-view__rail--backward {
+  top: 58px;
+}
+
+.channel-view__pulse {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.channel-view__pulse--forward {
+  top: 32px;
+  background: var(--amber-dim);
+  color: var(--amber);
+  border: 1px solid var(--amber);
+}
+
+.channel-view__pulse--backward {
+  top: 58px;
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+}
+
+.channel-view__pulse--loss {
+  background: rgba(217, 100, 95, 0.15);
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.channel-view__caption {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin: 0;
+}

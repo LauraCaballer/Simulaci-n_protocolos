@@ -1,0 +1,88 @@
+.window-viz__track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.window-viz__cell {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-raised);
+  color: var(--text-dim);
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.window-viz__cell--active {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 1px var(--amber-dim) inset;
+}
+
+.window-viz__cell--in-transit {
+  background: var(--amber-dim);
+  color: var(--amber);
+}
+
+.window-viz__cell--delivered,
+.window-viz__cell--acked {
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.window-viz__cell--lost,
+.window-viz__cell--discarded,
+.window-viz__cell--corrupted {
+  background: rgba(217, 100, 95, 0.12);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.window-viz__cell--timed-out {
+  border-color: var(--red);
+  transform: scale(1.05);
+}
+
+.window-viz__seq {
+  font-size: 13px;
+}
+
+.window-viz__retx {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 11px;
+  color: var(--red);
+}
+
+.window-viz__legend {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+  flex-wrap: wrap;
+}
+
+.window-viz__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.window-viz__dot--active {
+  background: var(--amber);
+}
+.window-viz__dot--acked {
+  background: var(--cyan);
+}
+.window-viz__dot--lost {
+  background: var(--red);
+}
